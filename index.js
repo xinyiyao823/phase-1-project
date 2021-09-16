@@ -1,6 +1,7 @@
 const BASE_URL_1 = 'https://thronesapi.com/api/v2/Characters'
 const BASE_URL_2 = 'https://got-quotes.herokuapp.com/quotes'
-let houseNames = [];
+const imgDiv = document.getElementById('img-div')
+let houseNames = []
 
 function getCharacters() {
     fetch(BASE_URL_1)
@@ -11,49 +12,84 @@ function getCharacters() {
     
 }
 getCharacters()
-const houseArray = houseNames;
-console.log(houseArray)
+console.log(houseNames)
 
 
 
 
+// Dropdown #1
 const dropDown1 = document.getElementById('house-list-1')
-dropDown1.addEventListener('change', sortHouses1)
+dropDown1.addEventListener('change', getImage1)
 
-function sortHouses1(e) {
-    let lastName = e.target.value // stark, lannister, targaryen, greyjoy, tyrell
-    let result = houseArray.filter(house => house === lastName)
-    
-        const list = document.createElement('li')
-        list.innerHTML = result
-        document.querySelector('div').append(list)
 
-    
+function getImage1(e) {
+    let lastName = e.target.value // stark, lannister, targaryen, greyjoy
+    if (lastName === 'House Stark') {
+        const starkImg = document.getElementById('first-selection')
+        starkImg.src = 'images/stark.png'
+        imgDiv.append(starkImg)
+    } else if (lastName === 'House Lannister') {
+        const lannisterImg = document.getElementById('first-selection')
+        lannisterImg.src = 'images/lannister.png'
+        imgDiv.append(lannisterImg)
+    } else if (lastName === 'House Targaryen') {
+        const targaryenImg = document.getElementById('first-selection')
+        targaryenImg.src = 'images/targaryen.png'
+        imgDiv.append(targaryenImg)
+    } else if (lastName === 'House Greyjoy') {
+        const greyjoyImg = document.getElementById('first-selection')
+        greyjoyImg.src = 'images/greyjoy.png'
+        imgDiv.append(greyjoyImg)
+    }
+ 
 }
+
+// Dropdown #2
 
 const dropDown2 = document.getElementById('house-list-2')
-dropDown2.addEventListener('change', sortHouses2)
+dropDown2.addEventListener('change', getImage2)
 
-function sortHouses2(e) {
-    let lastName = e.target.value // stark, lannister, targaryen, greyjoy, tyrell
-    console.log(lastName)
-    let result = houseArray.filter(house => house === lastName)
-    console.log(result)
-    
-        const list = document.createElement('li')
-        list.innerHTML = result
-        document.querySelector('div').append(list)
+function getImage2(e) {
+    let lastName = e.target.value // stark, lannister, targaryen, greyjoy
+    if (lastName === 'House Stark') {
+        const starkImg = document.getElementById('second-selection')
+        starkImg.src = 'images/stark.png'
+        imgDiv.append(starkImg)
+    } else if (lastName === 'House Lannister') {
+        const lannisterImg = document.getElementById('second-selection')
+        lannisterImg.src = 'images/lannister.png'
+        imgDiv.append(lannisterImg)
+    } else if (lastName === 'House Targaryen') {
+        const targaryenImg = document.getElementById('second-selection')
+        targaryenImg.src = 'images/targaryen.png'
+        imgDiv.append(targaryenImg)
+    } else if (lastName === 'House Greyjoy') {
+        const greyjoyImg = document.getElementById('second-selection')
+        greyjoyImg.src = 'images/greyjoy.png'
+        imgDiv.append(greyjoyImg)
+    }
+}
 
+// Click event for House 1 Img
+const imgTag1 = document.getElementById('first-selection')
+imgTag1.addEventListener('click', renderImgInfo1) 
+
+function renderImgInfo1(e) {
     
 }
 
-function getQuotes() {
-    fetch(BASE_URL_2)
-    .then(resp => resp.json())
-   // .then(quotesArray => console.log(quotesArray))
 
-}
-getQuotes()
+
+
+
+
+// function getQuotes() {
+//     fetch(BASE_URL_2)
+//     .then(resp => resp.json())
+//    // .then(quotesArray => console.log(quotesArray))
+
+// }
+// getQuotes()
 
 
 

@@ -15,7 +15,7 @@
     </header>
 
     <main>
-      <h1>Join Two Houses To Defeat The Ice King!</h1>
+      <h1 style="text-align:center">Join Two Houses To Defeat The Ice King!</h1>
       <section class="hero">
         <div>
           <span><img src="images/Ice Dragon.jpeg" width = "500" height =
@@ -38,23 +38,27 @@
       </section>
       <div>
         <span>
-            <label>Choose House 1: <select id="house-list-1" name="choose-house-1">
+            <label >Choose House 1: <select id="house-list-1" name="choose-house-1">
             <option value="blank"></option>
             <option value="House Stark">House Stark</option>
             <option value="House Lannister">House Lannister</option>
             <option value="House Targaryen">House Targaryen</option>
             <option value="House Greyjoy">House Greyjoy</option>
-            <option value="House Tyrell">House Tyrell</option>
           </select></label>
-          <label>Choose House 2: <select id="house-list-2" name="choose-house-1">
+          <label style="float:right;">Choose House 2: <select id="house-list-2" name="choose-house-1">
             <option value="blank"></option>
             <option value="House Stark">House Stark</option>
             <option value="House Lannister">House Lannister</option>
             <option value="House Targaryen">House Targaryen</option>
             <option value="House Greyjoy">House Greyjoy</option>
-            <option value="House Tyrell">House Tyrell</option>
           </select>
         </span>
+      </div>
+      <div id="img-div">
+        <span><img id="first-selection"></span>
+        <span ><img id="second-selection" style="float:right;"></span>
+        
+
       </div>
     </main>
   </body>
