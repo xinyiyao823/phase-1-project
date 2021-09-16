@@ -1,4 +1,4 @@
-const BASE_URL_1 = "http://localhost:3000/characters"
+const BASE_URL_1 = "https://thronesapi.com/api/v2/Characters"
 const BASE_URL_2 = 'https://got-quotes.herokuapp.com/quotes'
 const imgDiv = document.getElementById('img-div')
 let fetchObj = []
@@ -72,43 +72,139 @@ function getImage2(e) {
 
 // Click event for House 1 Img
 const imgTag1 = document.getElementById('first-selection')
-imgTag1.addEventListener('click', renderImgInfo1) 
+imgTag1.addEventListener('click', renderImgInfo1)
+const imgTag2 = document.getElementById('second-selection')
+imgTag2.addEventListener('click', renderImgInfo2)  
 
 function renderImgInfo1(e) {
     const img1 = document.getElementById('first-selection').src
     const img2 = document.getElementById('second-selection').src
     const imgDiv = document.getElementById('character-img-container')
-    
+ 
 
     if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/lannister.png') { //lannister photo
         let arr = fetchObj.filter(member => (member.family === 'House Lannister') || (member.family ==='House Lanister'))
         let imgArray = []
         arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
-        
         for (const image of imgArray) {
-            
             let charImg = document.createElement('img')
-            charImg.src = imgArray
+            charImg.src = image
             imgDiv.append(charImg)
-
         }
 
     } else if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/stark.png') { //stark photo
+        let arr = fetchObj.filter(member => member.family === 'House Stark')
+        let imgArray = []
+        arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
+        for (const image of imgArray) {
+            let charImg = document.createElement('img')
+            charImg.src = image
+            imgDiv.append(charImg)
+        }
 
     } else if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/targaryen.png') {
-
+        let arr = fetchObj.filter(member => (member.family === 'House Targaryen') || (member.family === 'Targaryan'))
+        let imgArray = []
+        arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
+        for (const image of imgArray) {
+            let charImg = document.createElement('img')
+            charImg.src = image
+            imgDiv.append(charImg)
+        }
     } else if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/greyjoy.png') {
+        let arr = fetchObj.filter(member => (member.family === 'House Greyjoy') || (member.family === 'Greyjoy'))
+        let imgArray = []
+        arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
+        for (const image of imgArray) {
+            let charImg = document.createElement('img')
+            charImg.src = image
+            imgDiv.append(charImg)
+        }
 
+    }
 }
+
+
+function renderImgInfo2(e) {
+    const img1 = document.getElementById('first-selection').src
+    const img2 = document.getElementById('second-selection').src
+    const imgDiv = document.getElementById('character-img-container')
+ 
+
+    if (img2 === 'file:///Users/xinyiyao/phase-1-project/images/lannister.png') { //lannister photo
+        let arr = fetchObj.filter(member => (member.family === 'House Lannister') || (member.family ==='House Lanister'))
+        let imgArray = []
+        arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
+        for (const image of imgArray) {
+            let charImg = document.createElement('img')
+            charImg.src = image
+            imgDiv.append(charImg)
+        }
+
+    } else if (img2 === 'file:///Users/xinyiyao/phase-1-project/images/stark.png') { //stark photo
+        let arr = fetchObj.filter(member => member.family === 'House Stark')
+        let imgArray = []
+        arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
+        for (const image of imgArray) {
+            let charImg = document.createElement('img')
+            charImg.src = image
+            imgDiv.append(charImg)
+        }
+
+    } else if (img2 === 'file:///Users/xinyiyao/phase-1-project/images/targaryen.png') {
+        let arr = fetchObj.filter(member => (member.family === 'House Targaryen') || (member.family === 'Targaryan'))
+        let imgArray = []
+        arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
+        for (const image of imgArray) {
+            let charImg = document.createElement('img')
+            charImg.src = image
+            imgDiv.append(charImg)
+        }
+    } else if (img2 === 'file:///Users/xinyiyao/phase-1-project/images/greyjoy.png') {
+        let arr = fetchObj.filter(member => (member.family === 'House Greyjoy') || (member.family === 'Greyjoy'))
+        let imgArray = []
+        arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
+        for (const image of imgArray) {
+            let charImg = document.createElement('img')
+            charImg.src = image
+            imgDiv.append(charImg)
+        }
+
+    }
 }
 
-// const familyMemberCollection = document.createElement('div')
-
-// const familyMember = document.createElement('img')
-// familyMember.src = charObj.url
 
 
+// Submit form to create your own character
+const form = document.querySelector('form')
+form.addEventListener('submit', function(e) {
+    e.preventDefault()
+    const inputCard = document.createElement('div')
 
+    let houseNameInput = e.target.name.value
+    let charNameInput = e.target.charName.value
+    let charTitleInput = e.target.charTitle.value
+    inputCard.append(houseNameInput, charTitleInput, charNameInput)
+
+    const span = document.getElementById('input')
+    span.append(inputCard)
+    
+
+    
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// Stretch Deliverable
 
 // function getQuotes() {
 //     fetch(BASE_URL_2)

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="index.js"></script>
-    <title></title>
+    <link rel="stylesheet" href='style.css'> 
+    <title>Game of Thrones</title>
   </head>
   <body>
     <header>
@@ -56,9 +57,29 @@
       </div>
       <div id="img-div">
         <span><img id="first-selection"></span>
+        <span id="input" style="text-align: center;"></span>
         <span ><img id="second-selection" style="float:right;"></span>
       </div>
       <div id="character-img-container">
+
+      </div>
+      <div id="create-own-char">
+        <h1>Create Your Own Character</h1>
+        <form>
+          <label>House Name:</label>
+          <input type="text" id="name" name="name">
+          <label>Full Name:</label>
+          <input type="text" id="char-name" name="charName"><br>
+          <label>Title:</label>
+          <input type="text" id="char-title" name="charTitle"><br>
+          <input type="submit" value="Enter">
+        </form>
+        
+
+
+
+
+        
 
       </div>
     </main>
