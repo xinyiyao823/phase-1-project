@@ -179,15 +179,16 @@ function renderImgInfo2(e) {
 const form = document.querySelector('form')
 form.addEventListener('submit', function(e) {
     e.preventDefault()
-    const inputCard = document.createElement('div')
+    const inputCard = document.createElement('h2')
 
     let houseNameInput = e.target.name.value
     let charNameInput = e.target.charName.value
     let charTitleInput = e.target.charTitle.value
-    inputCard.append(houseNameInput, charTitleInput, charNameInput)
+    let newChar = charTitleInput + ' ' + charNameInput + ' of House ' + houseNameInput
+    inputCard.append(newChar)
 
-    const span = document.getElementById('input')
-    span.append(inputCard)
+    const div = document.getElementById('render-new-char')
+    div.append(inputCard)
     
 
     

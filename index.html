@@ -11,42 +11,40 @@
   <body>
     <header>
       <nav class='navbar'>
-        <img src="images/Game of Thrones Logo.png" width = "1665" height = "300">
+        <img src="images/Screen Shot 2021-09-16 at 2.12.00 PM.png" width = "1680" height = "400">
       </nav>
     </header>
 
     <main>
-      <h1 style="text-align:center">Join Two Houses To Defeat The Ice King!</h1>
+      <div id="header">
+        <h1 style="text-align:center">Join Two Houses To Defeat The Ice King!</h1>
+      </div>
       <section class="hero">
         <div>
           <span><img src="images/Ice Dragon.jpeg" width = "500" height =
             "500"></span>
           <span><img src="images/Ice King.jpeg" width = "500" height = "500"></span>
           <span><img src="images/Army_of_the_Dead_Beyond_the_Wall.jpeg" width ="650" height = "500"></span>
-          <img class='danny' src='images/Game of Thrones.jpeg' alt='photo of Danny'>
+          <!-- <img class='danny' src='images/Game of Thrones.jpeg' alt='photo of Danny'> -->
         </div>
         <h2 class="white-walkers">
           The White Walkers were an ancient race of formerly-human ice creatures
           who came from the Far North of Westeros. After remaining hidden for
-          thousands of years, they returned. The White Walkers were thousands of
-          years old, coming from the time preceding the Age of Heroes. Born of
-          powerful and untested magic, they were created to protect the Children
-          of the Forest from the First Men, who had waged war on them ever since
-          they had arrived from Essos. However, the White Walkers eventually
+          thousands of years, they returned. However, the White Walkers eventually
           broke free of the Children's control and became the most feared
-          creatures in Westeros, posing a threat to anything living.
+          creatures in Westeros, posing a threat to anything living. Let's try to defeat them!
         </h2>
       </section>
       <div>
         <span>
-            <label >Choose House 1: <select id="house-list-1" name="choose-house-1">
+            <label id="house-1" style="font-size: 20px">Choose House 1: <select id="house-list-1" name="choose-house-1">
             <option value="blank"></option>
             <option value="House Stark">House Stark</option>
             <option value="House Lannister">House Lannister</option>
             <option value="House Targaryen">House Targaryen</option>
             <option value="House Greyjoy">House Greyjoy</option>
           </select></label>
-          <label style="float:right;">Choose House 2: <select id="house-list-2" name="choose-house-1">
+          <label style="float:right;font-size: 20px;" id="house-2">Choose House 2: <select id="house-list-2" name="choose-house-1">
             <option value="blank"></option>
             <option value="House Stark">House Stark</option>
             <option value="House Lannister">House Lannister</option>
@@ -60,26 +58,28 @@
         <span id="input" style="text-align: center;"></span>
         <span ><img id="second-selection" style="float:right;"></span>
       </div>
-      <div id="character-img-container">
-
+      <div id="character-img-container"> 
+<!-- character imgs go here after clicking on house sigil -->
       </div>
       <div id="create-own-char">
-        <h1>Create Your Own Character</h1>
+        <h1 style="text-align: center;">Create Your Own GoT Character Name!</h1>
         <form>
-          <label>House Name:</label>
-          <input type="text" id="name" name="name">
-          <label>Full Name:</label>
-          <input type="text" id="char-name" name="charName"><br>
+          <div>
+            <label>House Name:</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div>
+            <label>Full Name:</label>
+            <input type="text" id="char-name" name="charName"><br>
+          </div>
+          <div>
           <label>Title:</label>
-          <input type="text" id="char-title" name="charTitle"><br>
-          <input type="submit" value="Enter">
+            <input type="text" id="char-title" name="charTitle"><br>
+            <input type="submit" value="Submit">
+         </div>
         </form>
-        
-
-
-
-
-        
+      </div>
+      <div id='render-new-char'; style="text-align:center";>
 
       </div>
     </main>

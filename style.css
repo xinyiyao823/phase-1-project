@@ -1,6 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+
+
+
 * {
   margin: 0;
   padding: 0;
+}
+#header {
+  padding: 20px;
+}
+
+#create-own-char {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#house-1 {
+  margin-left: 20px;
+}
+
+#house-2 {
+  margin-right: 20px;
+}
+
+h2 {
+  padding-bottom: 20px;
+}
+input[type=submit] {
+  padding:5px 15px; 
+  background:#ccc; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
 }
 
 /* .danny {
@@ -11,25 +43,28 @@
 } */
 
 html {
+  font-family: 'Cardo', serif;
   scroll-behavior: auto;
   overflow-y:auto
+  
+}
+
+body {
+  background-color: rgba(216, 167, 42, 0.795);
 }
 
 input[type=text] {
-  width: 100%;
+  width: 20%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
 
-div[id=character-img-container] img  {
+#character-img-container > img {
   width: 200px;
   height: 200px;
 }
 
-/* 
- p.ex1 {
-   margin-left: 30px;
- } */
+
 
   /* Auto Scroll(?) on pictures, bottom of page */
