@@ -1,18 +1,18 @@
-const BASE_URL_1 = 'https://thronesapi.com/api/v2/Characters'
+const BASE_URL_1 = "http://localhost:3000/characters"
 const BASE_URL_2 = 'https://got-quotes.herokuapp.com/quotes'
 const imgDiv = document.getElementById('img-div')
-let houseNames = []
+let fetchObj = []
 
 function getCharacters() {
     fetch(BASE_URL_1)
     .then(resp => resp.json())
-    .then(charArray => charArray.forEach(function(charObj) {
-        houseNames.push(charObj.family) //populate array with house names
-    }))
+    .then(charArray =>  {
+        fetchObj = charArray;
+        console.log(fetchObj)
+    })
     
 }
 getCharacters()
-console.log(houseNames)
 
 
 
@@ -75,10 +75,37 @@ const imgTag1 = document.getElementById('first-selection')
 imgTag1.addEventListener('click', renderImgInfo1) 
 
 function renderImgInfo1(e) {
+    const img1 = document.getElementById('first-selection').src
+    const img2 = document.getElementById('second-selection').src
+    const imgDiv = document.getElementById('character-img-container')
     
+
+    if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/lannister.png') { //lannister photo
+        let arr = fetchObj.filter(member => (member.family === 'House Lannister') || (member.family ==='House Lanister'))
+        let imgArray = []
+        arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
+        
+        for (const image of imgArray) {
+            
+            let charImg = document.createElement('img')
+            charImg.src = imgArray
+            imgDiv.append(charImg)
+
+        }
+
+    } else if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/stark.png') { //stark photo
+
+    } else if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/targaryen.png') {
+
+    } else if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/greyjoy.png') {
+
+}
 }
 
+// const familyMemberCollection = document.createElement('div')
 
+// const familyMember = document.createElement('img')
+// familyMember.src = charObj.url
 
 
 
