@@ -18,10 +18,18 @@
 #house-1 {
   margin-left: 20px;
 }
+#house-1:hover {
+  box-shadow: 0px -1px 25px 8px rgba(0, 0, 0, 0.685);
+}
 
 #house-2 {
   margin-right: 20px;
 }
+
+#house-2:hover {
+  box-shadow: 0px -1px 25px 8px rgba(0, 0, 0, 0.685);
+}
+
 
 h2 {
   padding-bottom: 20px;
@@ -107,10 +115,12 @@ padding: 20px;
   justify-content: center;
   align-items: center;
   display: flex;
+
 }
 
 #form-container input {
   width: 250px; 
+  
 }
 
 
