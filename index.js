@@ -7,13 +7,11 @@ function getCharacters() {
     fetch(BASE_URL_1)
     .then(resp => resp.json())
     .then(charArray =>  {
-        fetchObj = charArray;
-        console.log(fetchObj)
+        fetchObj = charArray; 
     })
     
 }
 getCharacters()
-
 
 
 
@@ -191,7 +189,7 @@ form.addEventListener('submit', function(e) {
     div.append(inputCard)
     
 
-    
+    e.target.reset()
 })
 
 

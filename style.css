@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap');
+
 
 
 
@@ -15,22 +16,24 @@
 }
 
 #create-own-char {
-  text-align: center;
+  text-align: right;
   padding-bottom: 30px;
 }
 
 #house-1 {
   margin-left: 20px;
+  font-family: 'Cardo', serif;
 }
-#house-1:hover {
+#house-list-1:hover {
   box-shadow: 0px -1px 25px 8px rgba(0, 0, 0, 0.685);
 }
 
 #house-2 {
   margin-right: 20px;
+  font-family: 'Cardo', serif;
 }
 
-#house-2:hover {
+#house-list-2:hover {
   box-shadow: 0px -1px 25px 8px rgba(0, 0, 0, 0.685);
 }
 
@@ -38,6 +41,7 @@
 h2 {
   padding-bottom: 20px;
 }
+
 input[type=submit] {
   padding:5px 15px; 
   background:#ccc; 
@@ -47,12 +51,6 @@ input[type=submit] {
   border-radius: 5px; 
 }
 
-/* .danny {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.2;
-} */
 
 html {
   font-family: 'Cardo', serif;
@@ -61,16 +59,30 @@ html {
   
 }
 
-body {
+/* body {
   background-color: rgba(216, 167, 42, 0.795);
+} */
+
+body {
+  background: url('images/Wall GOT.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+
 input[type=text] {
-  width: 20%;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  align-items: center;
 }
+
+label {
+  display: inline-block
+  
+}
+
 
 #character-img-container > img {
   width: 200px;
@@ -105,6 +117,7 @@ input[type=text] {
     background-color: #ee0a0a;
     color: black;
 }
+
 #submit-button:active {
   box-shadow: 0 5px rgb(202, 14, 86);
   transform: translateY(4px);
@@ -112,8 +125,8 @@ input[type=text] {
 
 #form-container {
   max-width: 700px;
-margin: 30px auto;
-padding: 20px; 
+  margin: 30px auto;
+  padding: 20px; 
   background-color: #f6e1ca;
   outline: 4px inset #000;
   justify-content: center;
@@ -128,6 +141,8 @@ padding: 20px;
 }
 
 
-
+span {
+  font-family: 'Cardo', serif;
+}
 
   /* Auto Scroll(?) on pictures, bottom of page */
