@@ -66,5 +66,54 @@ input[type=text] {
 }
 
 
+#sqr1:hover {
+  box-shadow: 0px -1px 25px 8px rgba(236, 29, 15, 0.685);
+}
+
+ #sqr2:hover {
+    box-shadow: 0px -1px 25px 8px rgba(71, 97, 243, 0.966);
+} 
+
+#sqr3:hover {
+      box-shadow: 0px -1px 25px 8px rgb(233, 225, 225); 
+      
+}
+
+#submit-button {
+  display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 85px;
+    height:30px;
+    margin: 0 auto;
+    margin-top: 5px;
+    border: 2px solid black;
+    font-size: 18px;
+    text-align: center;
+    background-color: #ee0a0a;
+    color: black;
+}
+#submit-button:active {
+  box-shadow: 0 5px rgb(202, 14, 86);
+  transform: translateY(4px);
+}
+
+#form-container {
+  max-width: 700px;
+margin: 30px auto;
+padding: 20px; 
+  background-color: #f6e1ca;
+  outline: 4px inset #000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#form-container input {
+  width: 250px; 
+}
+
+
+
 
   /* Auto Scroll(?) on pictures, bottom of page */

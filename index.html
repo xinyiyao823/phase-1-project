@@ -21,10 +21,10 @@
       </div>
       <section class="hero">
         <div>
-          <span><img src="images/Ice Dragon.jpeg" width = "500" height =
+          <span><img id='sqr1' src="images/Ice Dragon.jpeg" width = "500" height =
             "500"></span>
-          <span><img src="images/Ice King.jpeg" width = "500" height = "500"></span>
-          <span><img src="images/Army_of_the_Dead_Beyond_the_Wall.jpeg" width ="671" height = "500"></span>
+          <span><img id='sqr2' src="images/Ice King.jpeg" width = "500" height = "500"></span>
+          <span><img id='sqr3' src="images/Army_of_the_Dead_Beyond_the_Wall.jpeg" width ="671" height = "500"></span>
           <!-- <img class='danny' src='images/Game of Thrones.jpeg' alt='photo of Danny'> -->
         </div>
         <h2 class="white-walkers" style="text-align: center;">
@@ -63,19 +63,17 @@
       </div>
       <div id="create-own-char">
         <h1 style="text-align: center;">Create Your Own GoT Character Name!</h1>
-        <form>
-          <div>
-            <label>House Name:</label>
-            <input type="text" id="name" name="name">
-          </div>
-          <div>
-            <label>Full Name:</label>
-            <input type="text" id="char-name" name="charName"><br>
-          </div>
-          <div>
+        <div></div>
+        <form id='form-container'>
+        <div>
+          <label>House Name:</label>
+          <input type="text" id="name" name="name" width = "70">
+          <div></div>
+          <label>Full Name:</label>
+          <input type="text" id="char-name" name="charName"><br>
           <label>Title:</label>
             <input type="text" id="char-title" name="charTitle"><br>
-            <input type="submit" value="Submit">
+            <input id="submit-button" type="submit" value="Submit">
          </div>
         </form>
       </div>
